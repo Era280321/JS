@@ -43,3 +43,12 @@ let login = prompt("What is your login?");
 let email = prompt("What is your email?");
 let password = prompt("What is your password?");
 alert("Dear "+login+", your email is "+email+", your password is "+password);
+
+
+//Task1.8
+let min =60
+let hour = 60*min
+let day = hour*12
+let month = day*31
+
+console.log ("there are "+hour+" seconds in hour "+day+" seconds in day "+month+" seconds in month ")
