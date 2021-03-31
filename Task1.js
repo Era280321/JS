@@ -52,3 +52,9 @@ let day = hour*12
 let month = day*31
 
 console.log ("there are "+hour+" seconds in hour "+day+" seconds in day "+month+" seconds in month ")
+
+let numbers = [2, 3, 4,5];
+
+for (let i = 0; i < numbers.length; i*i++) {   
+   console.log(cities[i]);
+}
