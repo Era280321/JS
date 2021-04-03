@@ -16,11 +16,11 @@ console.log(typeof res3); // "boolean"
 
 //Tas2.2
 let TheNumber =7//just for testing, this works also:= prompt("Enter your number");
-if(TheNumber%7>=0) {
+if(TheNumber%7<=0) {
     console.log(TheNumber + " is devideble to 7");
 }else {console.log(TheNumber + " is not devideble to 7");}
 
-if(TheNumber>0 & TheNumber%2>=0) {console.log(TheNumber + " is paired positive number");
+if(TheNumber>0 & TheNumber%2<=0) {console.log(TheNumber + " is paired positive number");
 }else {console.log(TheNumber + " is NOT paired positive number");}
 
 //Task2.3
