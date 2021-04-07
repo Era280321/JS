@@ -55,19 +55,7 @@ raiseToDegree(num1,num2) // Result: 8
 */
 
 
-/*
-function findMin() {
-    let result = 1;
-    let arr=[]
-    for (let i = 0; i < arguments.length; i++) {
-              arr[i]= parseInt(arguments[i]);
 
-    }
-    result = Math.min(...arr)
-    console.log(result);
- return result
-}
-*/
 
 //Task 3.5
 
