@@ -76,10 +76,55 @@ VM220:25 Error: Parameter is not a number!
 
 */
 
+//Task 3.3
+
+class MonthException {
+    constructor(message){
+        this.message=message;
+        this.name = "MonthException"
+    }
+}
+function showMonthName(month){
+    month=month-1
+    let monthesArr =["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dec"]
+    if (monthesArr[month] !== undefined) {
+        return monthesArr[month];
+    } else {
+        throw new MonthException ("Incorrect month number");
+    }
+}
+
+try {
+    let myMonth =14
+    let monthName = showMonthName(myMonth);
+    console.log (monthName);
+}
+catch (e){
+    console.error (e.name, e.message); 
+}
+// VM36:24 MonthException Incorrect month number
+
 //Task 3.4
 
+function showUser(id){
+    if (id<0){
+        throw new Error("Id must not be negative "+ id);
+    }
+    return {id:id};
+}
 
-
-
+function showUsers(ids) {
+   let result =[];
+   ids.forEach(function (id) {
+       try{
+           let person = showUser(id)
+           result.push(person);
+        } catch (exception){
+            console.log(exception.message);
+        }
+   });
+   return result
+}
+showUsers([7, -12, 44, 22]);
 
     
