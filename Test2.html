@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test2</title>
+</head>
+
+<body>
+    <select name="country" id="country">
+        <option value="Germany">Germany</option>
+        <option value="USA">USA</option>
+        <option value="Ukraine">Ukraine</option>
+    </select>
+    <select name="city" id="city">
+    </select>
+      <p>
+         <spam id="changed"></spam>
+      </p>
+
+      <script>
+          let TexttoChange = document.getElementById('changed');
+function listQ(){
+    TexttoChange.innerHTML = country.value;
+}
+function listQ2(){
+    TexttoChange.innerHTML = country.value+","+city.value;
+}
+
+var select = document.getElementById("city");
+
+var Germany = ["Berlin", " Hamburg", "Munich", "Frankfurt am Main"];
+var USA = ["New York", "California", "Illinois", "Texas"];
+var Ukraine = ["Lviv", "Kyiv", "Odesa", "Dnipro"];
+
+
+function generateOptions (arr){
+    listQ()
+for(var i = 0; i < arr.length; i++) {
+    var opt = arr[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    select.appendChild(el);
+}
+}
+
+function general(){
+if (country.value="USA"){
+    generateOptions (USA)
+}else if (country.value="Ukraine"){
+    generateOptions (Ukraine)
+}else{
+    generateOptions (Germany)
+}
+
+}
+
+document.getElementById("country").onchange = general ;
+document.getElementById("city").onchange = listQ2
+      </script>
+
+
+</body>
+</html>

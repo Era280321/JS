@@ -6,26 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div>
-      <p>
-        <a>link</a> some text
-      </p>
-    </div>
-    <!-- Comment -->
-        <script>
-          let bodyElements = document.body.children;
-          for (let i = 0; i < bodyElements.length; i++) {
-             alert(bodyElements[i]); // DIV SCRIPT 
-          }
-       </script>
-    </body>
+    <select name="country" id="country">
+        <option value="ger">Germany</option>
+        <option value="usa">USA</option>
+        <option value="ukr">Ukraine</option>
+    </select>
+    <select name="city" id="city">
+    </select>
+      <p>
+        Your value <spam id="changed"></spam>
+      </p>
+
+      <script>
+          var changedText = document.getElementById('changed');
+function listQ(){
+    changedText.textContent = this.value;
+}
+document.getElementById("country").onchange = listQ;
+      </script>
 </body>
-</html>    
-
-
-alert(Array[0].innerHTML)
-alert(Array[4].innerHTML)  
-alert(Array[1].innerHTML)
-alert(Array[2].innerHTML)
-alert(Array[3].innerHTML)
+</html>

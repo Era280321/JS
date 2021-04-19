@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Task2
+    <p id ="text">I learning JavaScript events!</p> 
+    <div>
+        <button id="btn">Change style!</button>
+    </div>    
+
+    <script>
+
+let targetText = document.getElementById("text")
+
+function ChangeCSS() {
+    targetText.style.color = "orange";
+    targetText.style.fontSize = "20px";
+    targetText.style.fontFamily = "Comic Sans MS";
+}
+
+
+btn.addEventListener('click', ChangeCSS)
+
+    </script>
+    -->
+
+
+
+ <!--Task3
+    <div>
+        <button id="btn1">Click to make this page blue.</button>
+        <button id="btn2">Double-click to make this page pink.</button>
+        <button id="btn3">Click and hold to make this page brown.</button>
+        <div id="link"><a href="#footer">"Hover over to make page yellow"</a> 
+    </div>
+    </div>  
+
+    <script>
+        
+        function ChangeColor1() {
+            document.body.style.backgroundColor = "blue";
+        } 
+        
+        btn1.addEventListener('click', ChangeColor1)
+
+        function ChangeColor2() {
+            document.body.style.backgroundColor = "pink";
+        } 
+        
+        btn2.addEventListener('dblclick', ChangeColor2)
+
+
+        function ChangeColor3() {
+            document.body.style.backgroundColor = "brown";
+        } 
+
+        function ChangeColor_White() {
+            document.body.style.backgroundColor = "white";
+        }
+
+        
+        function ChangeColor_yellow() {
+            document.body.style.backgroundColor = "yellow";
+        }
+        
+        btn3.addEventListener('mousedown', ChangeColor3)            
+        btn3.addEventListener('mouseup', ChangeColor_White)
+
+
+
+        link.addEventListener('mouseover', ChangeColor_yellow);
+        link.addEventListener('mouseout', ChangeColor_White);
+
+
+            </script>
+            -->
+
+
+
+
+             <!--Task4
+            <label for="names"></label>
+
+<select name="name1" id="name1">
+  <option value="Peter">Peter</option>
+  <option value="John">John</option>
+  <option value="Alice">Alice</option>
+  <option value="Alex">Alex</option>
+</select>
+
+<button id="btntochoose">Choose and delete</button>
+
+<script> 
+var nameG = document.getElementById('name1');
+
+function DelateEl(){
+nameG.remove(nameG.selectedIndex);
+}
+
+btntochoose.addEventListener('click', DelateEl)
+
+  </script>
+
+
+     -->
+
+
+
+
+
+      <!--Task5
+
+<button id="btn">Live button</button>
+
+<div id="target"></div>  
+
+<script>
+    let x = document.getElementById('target');
+
+function Pressed(){
+    let Div = document.createElement("div");
+    document.body.appendChild(Div)
+        Div.innerHTML = "I was pressed!";
+}
+
+function OnMe(){
+    let Div = document.createElement("div");
+    document.body.appendChild(Div)
+        Div.innerHTML = "Mouse on me!";
+}
+
+function NotOnM(){
+    let Div = document.createElement("div");
+    document.body.appendChild(Div)
+        Div.innerHTML = "Mouse is not on me!";
+}
+
+    
+    btn.addEventListener('click', Pressed)
+    btn.addEventListener('mouseover', OnMe);
+    btn.addEventListener('mouseout', NotOnM);
+
+</script>
+ -->
+
+ 
+ <!--Task6
+
+ <div id="width"></div>
+ <div id= "height"></div>
+
+ <script>
+     
+let x = document.getElementById('width');
+let y = document.getElementById('height');
+
+function Resize(){
+x.innerHTML= "Width:"+window.innerWidth
+y.innerHTML="Height:"+window.innerHeight}
+
+window.addEventListener("resize",Resize)
+
+ </script>
+ -->
+
+  <!--Task7 -->
+    <select name="country" id="country">
+        <option value="Germany">Germany</option>
+        <option value="USA">USA</option>
+        <option value="Ukraine">Ukraine</option>
+    </select>
+    <select name="city" id="city">
+    </select>
+      <p>
+         <spam id="changed"></spam>
+      </p>
+
+      <script>
+          let TexttoChange = document.getElementById('changed');
+function listQ(){
+    TexttoChange.innerHTML = country.value;
+}
+function listQ2(){
+    TexttoChange.innerHTML = country.value+","+city.value;
+}
+
+var select = document.getElementById("city");
+
+var Germany = ["Berlin", " Hamburg", "Munich", "Frankfurt am Main"];
+var USA = ["New York", "California", "Illinois", "Texas"];
+var Ukraine = ["Lviv", "Kyiv", "Odesa", "Dnipro"];
+
+
+function generateOptions (arr){
+    listQ()
+for(var i = 0; i < arr.length; i++) {
+    var opt = arr[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    select.appendChild(el);
+}
+}
+
+function general(){
+if (country.value==="USA"){
+    generateOptions (USA)
+}else if (country.value==="Ukraine"){
+    generateOptions (Ukraine)
+}else{
+    generateOptions (Germany)
+}
+
+}
+
+document.getElementById("country").onchange = general ;
+document.getElementById("city").onchange = listQ2
+      </script>
+
+
+</body>
+</html>
