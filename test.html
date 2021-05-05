@@ -4,27 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <select name="country" id="country">
-        <option value="ger">Germany</option>
-        <option value="usa">USA</option>
-        <option value="ukr">Ukraine</option>
-    </select>
-    <select name="city" id="city">
-    </select>
-      <p>
-        Your value <spam id="changed"></spam>
-      </p>
-
-      <script>
-          var changedText = document.getElementById('changed');
-function listQ(){
-    changedText.textContent = this.value;
-}
-document.getElementById("country").onchange = listQ;
-      </script>
+    <input type=checkbox id="cb1" name="cb1">
+    <input type=checkbox id="cb2" name="cb2">
+    <input type=checkbox id="cb3" name="cb3">
+    <input type=checkbox id="cb4" name="cb4">
+    <input type=checkbox id="cb5" name="cb5">
+    
+    <div id="hidden">some stuff</div> 
+   <script> 
+   
+   $('#hidden').hide();
+$('input:checkbox').click(function() {
+    if($('input:checkbox:not(:checked)').length>2)
+    {
+        $('input:checkbox').show();
+    }
+    else
+    {
+        $('input:checkbox').hide();
+    }   
+});
+    </script>
+ 
 </body>
 </html>
